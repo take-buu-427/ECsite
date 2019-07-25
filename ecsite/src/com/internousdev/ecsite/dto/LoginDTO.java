@@ -5,34 +5,33 @@ public class LoginDTO {
 	private String loginId;
 	private String loginPassword;
 	private String userName;
-	private boolean loginFlg=false;
+	private boolean loginFlg = false;
 
-
-	public String getLoginId(){
+	public String getLoginId() {
 		return loginId;
 	}
-	public void setLoginId(String loginId){
-		this.loginId=loginId;
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
 	}
 
-	public String getLoginPassword(){
+	public String getLoginPassword() {
 		return loginPassword;
 	}
-	public void setLoginPassword(String loginPassword){
-		this.loginPassword=loginPassword;
+	public void setLoginPassword(String loginPassword) {
+		this.loginPassword = loginPassword;
 	}
 
-	public String getUsername(){
+	public String getUsername() {
 		return userName;
 	}
-	public void setUsername(String userName){
-		this.userName=userName;
+	public void setUsername(String userName) {
+		this.userName = userName;
 	}
 
-	public boolean getLoginFlg(){
+	public boolean getLoginFlg() {
 		return loginFlg;
 	}
-	public void setLoginFlg(boolean loginFlg){
-		this.loginFlg=loginFlg;
+	public void setLoginFlg(boolean loginFlg) {
+		this.loginFlg = loginFlg;
 	}
 }

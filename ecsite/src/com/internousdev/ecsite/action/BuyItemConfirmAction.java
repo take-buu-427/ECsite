@@ -1,35 +1,31 @@
 package com.internousdev.ecsite.action;
 
-import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.interceptor.SessionAware;
-import java.util.Map;
-import com.internousdev.ecsite.dao.BuyItemCompleteDAO;
 import java.sql.SQLException;
+import java.util.Map;
 
-public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
+import org.apache.struts2.interceptor.SessionAware;
 
-	public Map<String,Object> session;
+import com.internousdev.ecsite.dao.BuyItemCompleteDAO;
+import com.opensymphony.xwork2.ActionSupport;
 
-	private BuyItemCompleteDAO buyItemCompleteDAO=new BuyItemCompleteDAO();
+public class BuyItemConfirmAction extends ActionSupport implements SessionAware {
 
+	public Map<String, Object> session;
 
-	public String execute()throws SQLException{
+	private BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
 
-		buyItemCompleteDAO.buyItemInfo(
-				session.get("id").toString(),
-				session.get("total_price").toString(),
-				session.get("count").toString(),
-				session.get("login_user_id").toString(),
-				session.get("pay").toString()
-				);
+	public String execute() throws SQLException {
 
-		String result=SUCCESS;
+		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(), session.get("total_price").toString(),
+				session.get("count").toString(), session.get("login_user_id").toString(),
+				session.get("pay").toString());
+
+		String result = SUCCESS;
 		return result;
-
 	}
 
 	@Override
-	public void setSession(Map<String,Object> session){
-		this.session=session;
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
 	}
 }
